@@ -2,17 +2,11 @@ import React , {useEffect}from "react"
 import mainImage from './Group 2.png'
 
 export default function Header() {
-  useEffect(() => {    
-    if (typeof window === 'undefined' || !window.document) {
-      const fragment = document.getElementById("homeHeader")
-       fragment.classList.add("homeHeaderActive")
-    }
-   
-    
- }, []);
+ 
 
   return (
    <div id="homeHeader" className="homeHeader">
+    
        <img className="a"  src={mainImage}/>
        <div className="homeHeader_wrapContent">
            <h1 className="homeHeader_wrapContent-title"> Aimily</h1>
