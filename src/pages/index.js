@@ -9,6 +9,8 @@ import Header from "../components/homepage/Header"
 import How from "../components/homepage/How"
 import BlogHome from "../components/homepage/Blog"
 import Team from "../components/homepage/Team"
+
+
 import AOS from 'aos';
 import 'aos/dist/aos.css'; // You can also use <link> for styles
 // ..

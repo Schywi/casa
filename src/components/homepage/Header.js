@@ -3,7 +3,7 @@ import mainImage from './Group 2.png'
 
 export default function Header() {
  
-
+  
   return (
    <div id="homeHeader" className="homeHeader">
     
