@@ -16,8 +16,11 @@ import 'aos/dist/aos.css'; // You can also use <link> for styles
 // ..
 export default function Blog({ data, location }) {
 
+  if (typeof window === 'undefined' || !window.document) {
+    AOS.init();
+    return;
+  }
 
-AOS.init();
 
 
   return (
