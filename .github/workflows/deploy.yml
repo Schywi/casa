@@ -35,7 +35,7 @@ jobs:
           pipenv install
           pipenv run python ./script/get_blog_posts.py
           yarn install
-          yarn deploy
+          yarn build
 
       - name: Deploy 🚀
         uses: JamesIves/github-pages-deploy-action@3.7.1
