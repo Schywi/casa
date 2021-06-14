@@ -3,9 +3,11 @@ import mainImage from './Group 2.png'
 
 export default function Header() {
   useEffect(() => {    
-    
-    const fragment = document.getElementById("homeHeader")
-    fragment.classList.add("homeHeaderActive")
+    if (typeof window === 'undefined' || !window.document) {
+      const fragment = document.getElementById("homeHeader")
+       fragment.classList.add("homeHeaderActive")
+    }
+   
     
  }, []);
 
