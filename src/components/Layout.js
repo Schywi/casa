@@ -156,7 +156,8 @@ export default function Layout({ children }) {
       position:relative;
            z-index: 10
           `}>{children}</div>
-      <Particles params={{
+          { typeof window !== 'undefined'? (
+ <Particles params={{
   "particles": {
     "number": {
       "value": 80,
@@ -266,6 +267,9 @@ export default function Layout({ children }) {
   },
   "retina_detect": true
 }}/>
+          ): null
+          }
+     
     </div>
   )
 }
