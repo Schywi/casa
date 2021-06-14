@@ -1,0 +1,265 @@
+@import './frament.scss';
+#tsparticles{
+    position:fixed;
+     z-index: 1;
+   top:1px;
+   width:100vw;
+   height:100vh;
+}
+
+ 
+
+.homeHeader {
+    display: flex;
+   
+        &_mainImage{
+           
+        }
+        &_wrapContent{
+           margin-left: 70px;
+           &-title {
+            font-family: Bai Jamjuree;
+            font-size: 72px;
+            font-style: normal;
+            font-weight: 700;
+            line-height: 48px;
+            letter-spacing: 0px;
+            text-align: left;
+            color:black;
+        }
+        &-content {
+        //styleName: Display - Heavy ;
+        font-family: Bai Jamjuree;
+        font-size: 36px;
+        font-style: normal;
+        font-weight: 700;
+        line-height: 48px;
+        letter-spacing: 0px;
+        text-align: left;
+
+        }
+          
+         
+        }
+        &_wrapNewsletter{
+            width: 523px;
+            display: flex;
+            flex-direction: column;
+          
+            span {
+                //styleName: Title - Light;
+                     font-family: Bai Jamjuree;
+                     font-size: 17.5px;
+                     font-style: normal;
+                     font-weight: 400;
+                     line-height: 28px;
+                     letter-spacing: 0px;
+                     text-align: left;
+ 
+            }
+        } 
+        &_wrapInput{
+        
+            display: flex ;
+           
+            align-items: center;
+            width: 100%;
+            
+           &-input{
+               width: 357px;
+               height: 46px;
+               margin-right: 35px;
+               background: #FFFFFF;
+border: 1px solid #797676;
+           }
+
+           button{
+          cursor: pointer;
+             padding: 12px;
+            text-align: center;
+             color: #FCFCFC;
+            width: 144px;
+            height: 46px;
+           border:none;
+           font-weight: bold;
+            
+            background: #797676;
+           }
+        }
+}
+.ContainerWrap {
+    margin-top: 45px;
+    padding: 100px 0;
+    background: white;
+   
+    h2 {
+        text-align: center;
+        font-size: 46px;
+    }
+}
+
+
+.how {
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    &_wrapContent {
+        background: #FFFFFF;
+border: 1px solid #000000;
+       max-width: 328px;
+       margin-right: 41px;
+      
+      
+       &:last-child {
+        margin-right: 0px;
+       }
+       &_container {
+        margin-top: 12px;
+        padding: 20px;
+        &-title {
+            text-align: center;
+            font-size: 18px ;
+          
+        }
+        &-content {
+            font-size: 14px ;
+            text-align: justify;
+         
+            
+        }
+
+       
+       }
+       &:first-child {
+          
+        div{
+            
+         
+            padding:  70px 20px !important;
+        }
+    
+        
+       } 
+       
+    }
+}
+.howFix {
+    margin-top: -28px;
+}
+
+.blogHome {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        background: #C4C4C4;
+        padding: 45px 0 ;
+        &_content{
+            margin-left: 45px;
+
+            p {
+                text-align: justify;
+                width: 563px;
+                font-size: 14px;
+            }
+        }
+    
+}
+
+.blogRow{
+    display: flex;
+    justify-content:  space-between;
+    align-items: flex-start;
+    margin-top: 25px;
+    &_wrapContent{
+        max-width: 360px; 
+       
+        
+            &_container{
+
+                &-title{
+                    font-size: 18px;
+                    margin-top: 15px;
+                   margin-bottom: 10px; 
+                }
+                &-content{
+                    font-size: 14px;
+                }
+            }
+        &:last-child{
+            margin: 0;
+        }
+
+    }
+}
+.TeamContainer{
+    display: flex;
+    flex-wrap: wrap;
+ 
+   
+    &_teamCard{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        margin-right: 57px;
+        font-size: 22px;
+        &:nth-child(n+5){
+             margin-top: 25px;
+        }
+        img {
+            max-width: 206px;
+            max-height: 206px;
+            object-fit: cover;
+            border-radius: 50%;
+        }
+        
+    }
+}
+.teamFix {
+    padding-top: 0px;
+    margin-top: 45px;
+    h2{
+        padding-top: 45px;
+    }
+}
+
+
+
+
+.socialMidia{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 86px;
+}
+
+.image1 {
+    background: url("https://www.thebalancesmb.com/thmb/f3_NuKDRY2fe11yaHZ0Eh3ZebK4=/1333x1000/smart/filters:no_upscale()/smart-goal-examples-2951827_final-5b6887cc46e0fb0050aa0bc9.png") no-repeat center center ; 
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+    height: 186.8759002685547px; 
+ 
+
+}
+.image2 {
+    background: url("https://mk0softwareplanjrdht.kinstacdn.com/wp-content/uploads/2019/02/trello-timeline-milestones.jpg") no-repeat center center ; 
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+    height: 186.8759002685547px;
+   
+     
+}
+.image3 {
+    background: url("https://www.vislumbrerh.com/wp-content/uploads/2018/06/Tipos-de-Inova%C3%A7%C3%A3o-600x300.jpg") no-repeat center center ; 
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+    height: 186.8759002685547px;
+ 
+     
+}

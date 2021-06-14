@@ -66,7 +66,7 @@ typings/
 ./set-a-smart-goal
 # Mac files
 .DS_Store
-
+oldpages
 # Yarn
 yarn-error.log
 .pnp/

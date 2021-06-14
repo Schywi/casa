@@ -63,3 +63,9 @@ div.bookmark {
   color: var(--textNormal);
   border-color: var(--textNormal);
 }
+
+h2 , h3{
+  color: black;
+}
+
+@import './css/style.css';

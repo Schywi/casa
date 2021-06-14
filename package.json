@@ -12,10 +12,12 @@
     "start": "npm run develop",
     "serve": "gatsby serve",
     "clean": "gatsby clean",
-    "import-notion-posts": "dotenv -- python3 ./script/get-blog-posts.py"
+    "import-notion-posts": "dotenv -- python3 ./script/get-blog-posts.py",
+    "sass": "sass --watch src/styles/sass/style.scss src/styles/css/style.css"
   },
   "dependencies": {
     "@emotion/react": "11.4.0",
+    "aos": "3.0.0-beta.6",
     "dotenv": "^9.0.2",
     "gatsby": "3.5.0",
     "gatsby-image": "3.5.0",
@@ -41,6 +43,8 @@
     "react": "17.0.2",
     "react-dom": "17.0.2",
     "react-helmet": "6.1.0",
+    "react-icons": "4.2.0",
+    "react-particles-js": "3.4.1",
     "react-typography": "0.16.20",
     "typography": "0.16.21",
     "typography-theme-fairy-gates": "0.16.19",
