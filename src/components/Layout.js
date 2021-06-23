@@ -5,6 +5,7 @@ import { rhythm } from "../utils/typography"
 import DarkModeToggler from "./DarkModeToggler"
 import ClientOnly from "./ClientOnly"
 import Particles from 'react-particles-js';
+import logo from '../images/aimilyLogo.svg'
 const isActive =
   propsIfActive =>
   ({ isPartiallyCurrent, href, location }) => {
@@ -71,7 +72,7 @@ export default function Layout({ children }) {
         transition: "color 2s ease-out, background 2s ease-out";
       `}
     >
-      <header css={css`
+      <header className="headerOfAllPages" css={css`
       position:relative;
            z-index: 10
           `}>
@@ -79,7 +80,8 @@ export default function Layout({ children }) {
           css={css`
             display: flex;
             flex-direction: column;
-            align-items: center;
+            align-items: flex-start;
+            justify-content: center;
             margin-bottom: ${rhythm(2)};
 
             @media (min-width: 650px) {
@@ -102,7 +104,8 @@ export default function Layout({ children }) {
               }
             `}
           >
-            <h2
+           {/**
+            * <h2
               css={css`
                 display: inline-block;
                 font-style: normal;
@@ -110,8 +113,11 @@ export default function Layout({ children }) {
                 color: var(--websiteTitle);
               `}
             >
-              {data.site.siteMetadata.title}
+            
+             data.site.siteMetadata.title
             </h2>
+            */} 
+            <img src={logo}/>
           </Link>
           <nav
             css={css`
@@ -128,7 +134,7 @@ export default function Layout({ children }) {
           >
              <MenuLink to="/">Home</MenuLink>
             <MenuLink to="/blog/">Blog</MenuLink>
-        
+            <MenuLink to="/">Team</MenuLink>
           </nav>
         </div>
         <div

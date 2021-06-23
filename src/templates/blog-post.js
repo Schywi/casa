@@ -9,6 +9,7 @@ import { withPrefix } from "gatsby"
 
 export default function BlogPost({ data, pageContext, location }) {
   const { previousPost, nextPost } = pageContext
+  console.log("aa", pageContext)
   const post = data.markdownRemark
   const image = post.frontmatter.image
     ? post.frontmatter.image.childImageSharp.resize
@@ -24,12 +25,15 @@ export default function BlogPost({ data, pageContext, location }) {
         pathname={location.pathname}
       />
       <main
+      
         css={css`
           display: flex;
           flex-direction: column;
         `}
       >
-        <Link
+        {/**
+         * 
+         *   <Link
           to="/blog/"
           css={css`
             margin-bottom: ${rhythm(1)};
@@ -37,12 +41,28 @@ export default function BlogPost({ data, pageContext, location }) {
         >
           ← Back
         </Link>
-        <article>
-          <h1>{post.frontmatter.title}</h1>
-          <h2>{post.frontmatter.date}</h2>
-          <img src={hero}></img>
-          <div dangerouslySetInnerHTML={{ __html: post.html }} />
-        </article>
+         */}
+      
+        <article  className="blogPostContainer">
+          <div className="whoWrite">
+                <img src="https://cdn.iconscout.com/icon/premium/png-512-thumb/female-avatar-12-774634.png"/>
+                <strong>Duis aute </strong>
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+
+          </div>
+          <div className="postContainer">
+          <div className="mainContentPost">
+                <h1>{post.frontmatter.title}</h1>
+              {/**
+               *  <h2>{post.frontmatter.date}</h2>
+               */} 
+               
+                <div dangerouslySetInnerHTML={{ __html: post.html }} />
+                <img src={hero}></img>
+          </div>
+         
+          </div>
+           </article>
       </main>
       <nav
         css={css`
@@ -55,19 +75,61 @@ export default function BlogPost({ data, pageContext, location }) {
       >
         <div>
           {previousPost && (
-            <Link
-              to={`/blog${previousPost.slug}`}
-              rel="prev"
-              style={{ marginRight: 20 }}
-            >
-              ← {previousPost.title}
-            </Link>
+            <div className="wrapNextPost"> 
+                  <Link
+                    to={`/blog${previousPost.slug}`}
+                    rel="prev"
+                    style={{ marginRight: 20 }}
+
+                  >
+                    <div className="nextPost">
+                        <img src="https://d39l2hkdp2esp1.cloudfront.net/img/photo/141565/141565_00_2x.jpg"></img>
+                        <span>{previousPost.title}</span>
+                        <p>Apr 26, 2021 11:22 PM</p>
+                      </div>
+            
+                  </Link>
+                  <Link
+                    to={`/blog${previousPost.slug}`}
+                    rel="prev"
+                    style={{ marginRight: 20 }}
+
+                  >
+                    <div className="nextPost">
+                        <img src="https://d39l2hkdp2esp1.cloudfront.net/img/photo/141565/141565_00_2x.jpg"></img>
+                        <span>{previousPost.title}</span>
+                        <p>Apr 26, 2021 11:22 PM</p>
+                      </div>
+            
+                  </Link>
+                  <Link
+                    to={`/blog${previousPost.slug}`}
+                    rel="prev"
+                    style={{ marginRight: 20 }}
+
+                  >
+                    <div className="nextPost">
+                        <img src="https://d39l2hkdp2esp1.cloudfront.net/img/photo/141565/141565_00_2x.jpg"></img>
+                        <span>{previousPost.title}</span>
+                        <p>Apr 26, 2021 11:22 PM</p>
+                      </div>
+            
+                  </Link>
+
+            </div>
+         
+            
           )}
         </div>
         <div>
           {nextPost && (
             <Link to={`/blog${nextPost.slug}`} rel="next">
-              {nextPost.title} →
+             
+              <div className="nextPost">
+                <img src="https://d39l2hkdp2esp1.cloudfront.net/img/photo/141565/141565_00_2x.jpg"></img>
+                <span>{nextPost.title}</span>
+                <p></p>
+              </div>
             </Link>
           )}
         </div>
